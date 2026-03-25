@@ -1,0 +1,17 @@
+{
+  "name": "@webpinnacles/seo-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "echo \"Python scripts only\"",
+    "lint": "echo \"No JS lint target\"",
+    "test": "echo \"No automated python tests configured\"",
+    "typecheck": "echo \"No TS typecheck target\"",
+    "index:url": "python indexing/gsc_index.py --url",
+    "index:sitemap": "python indexing/gsc_index.py --sitemap",
+    "sitemap:generate": "python sitemap/generate_sitemap.py --base-url https://webpinnacles.com --output ./sitemap.xml",
+    "audit:schema": "python audit/schema_validate.py --sitemap https://webpinnacles.com/sitemap.xml",
+    "audit:crux": "python audit/crux_monitor.py --origin https://webpinnacles.com"
+  }
+}

@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env
+.env
+.env.local
+.env.*.local
+
+# build
+dist/
+build/
+.next/
+coverage/
+playwright-report/
+test-results/
+.turbo/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+
+# drizzle
+drizzle/meta/
