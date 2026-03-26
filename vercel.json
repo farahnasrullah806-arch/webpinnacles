@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  // Root vercel.json tells Vercel this is a monorepo.
+  // The actual build config lives in apps/web/vercel.json
+  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- apps/web packages/contracts"
+}
