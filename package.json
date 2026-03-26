@@ -2,15 +2,22 @@
   "name": "webpinnacles",
   "private": true,
   "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=10.0.0"
+  },
   "scripts": {
-    "dev": "turbo run dev --parallel",
-    "build": "turbo run build",
+    "dev": "turbo run dev --parallel --filter=./apps/*",
+    "build": "turbo run build --filter=./apps/*",
+    "build:web": "turbo run build --filter=web",
+    "build:cms": "turbo run build --filter=cms-admin",
+    "build:api": "turbo run build --filter=api",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "node -e \"if(process.env.CI !== 'true' && process.env.VERCEL !== '1'){require('child_process').execSync('husky',{stdio:'inherit'})}\""
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
